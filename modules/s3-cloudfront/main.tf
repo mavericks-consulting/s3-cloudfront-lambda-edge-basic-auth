@@ -110,11 +110,11 @@ resource "aws_cloudfront_distribution" "static-web" {
       query_string = false
       cookies { forward = "none" }
     }
-  }
 
-  lambda_function_association {
-    event_type   = "viewer-request"
-    lambda_arn   = var.basic_auth_lambda_arn
-    include_body = false
+    lambda_function_association {
+      event_type   = "viewer-request"
+      lambda_arn   = var.basic_auth_lambda_arn
+      include_body = false
+    }
   }
 }
