@@ -19,7 +19,7 @@ module "basic_auth" {
 }
 
 locals {
-  aws_s3_bucket_name = "staymasked-dev.mavericks-apps.com"
+  aws_s3_bucket_name = "temasek-staym-dev.mavericks-apps.com"
 }
 
 module "dev-env" {
